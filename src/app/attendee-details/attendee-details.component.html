@@ -1,0 +1,23 @@
+<p>attendee-details works!</p>
+
+<p>{{newcomponent}}</p>
+
+
+
+<div>
+    Months:<select (change) = "changemonths($event)">
+        <option  *ngFor ="let i of months">{{i}}</option>
+    </select>
+</div>
+
+<button (click)="myClickFunction($event)">
+    Click Me
+</button>
+
+<h1>Custom Pipe</h1> 
+<b>Square root of 25 is: {{25 | sqrt}}</b> 
+<br/> 
+<b>Square root of 729 is: {{729 | sqrt}}</b>
+
+<div>
+    Current Date:<b>{{todaydate}}</b></div>

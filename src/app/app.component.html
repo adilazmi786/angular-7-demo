@@ -1,4 +1,4 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 <!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
 <!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
@@ -524,7 +524,7 @@
   </svg>
 
 </div>
-
+<app-attendee-details></app-attendee-details>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
@@ -533,6 +533,15 @@
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
+<div style = "text-align:center"> 
+  <span appChangeText ><b>Welcome to {{title | uppercase}}.</b></span> 
+</div>
 
+<h1>Angular 7 Routing Demo</h1> 
+<nav> 
+   <a routerLink = "/home">Home</a> 
+   <a routerLink = "/contact-us">Contact Us </a> 
+   <a routerLink = "/registration">Registration </a> 
 
+</nav> 
 <router-outlet></router-outlet>
