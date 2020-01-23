@@ -1,0 +1,133 @@
+
+=====================================================
+
+e2e/ => end to end test folder. Mainly e2e is used for integration testing and helps ensure the application works fine.
+node modules => The npm package installed is node_modules. You can open the folder and see the packages available.
+src => This folder is where we will work on the project using Angular 7.Inside src/ you will app/ folder created during the project setup and holds all the required files required for the project.
+src/app =>
+src/assets =>
+src/environments =>
+src/favicon =>
+src/index.html =>
+src/main.ts =>
+src/polyfills.ts =>
+src/style.css =>
+.editorconfig => configuration file for editor
+.gitignore => has to be commited in to repository in order to shaare the ignore rules with any other users that clone the repository
+angular.json => It basically holds the project name, version of cli, etc.
+package.json => The package.json file tells which libraries will be installed into node_modules when you run npm install.
+tsconfig.json => This basically contains the compiler options required during compilation.
+tslint.json => This is the config file with rules to be considered while compiling.
+browserlist =>
+karma.confjs =>
+=========================================================================================
+@NgModule is imported from @angular/core and it has object with following properties −
+
+Declarations − In declarations, the reference to the components is stored. The App component is the default component that is created whenever a new project is initiated. We will learn about creating new components in a different section.
+
+Imports − This will have the modules imported as shown above. At present, BrowserModule is part of the imports which is imported from @angular/platform-browser. There is also routing module added AppRoutingModule.
+
+Providers − This will have reference to the services created. The service will be discussed in a subsequent chapter.
+
+Bootstrap − This has reference to the default component created, i.e., AppComponent.
+
+app.component.css − You can write your css over here. Right now, we have added the background color to the div as shown below.
+
+It starts with @NgModule and contains an object which has declarations, imports, providers and bootstrap.
+Declaration
+It is an array of components created. If any new component gets created, it will be imported first and the reference will be 
+included in declarations as shown below −
+
+declarations: [ 
+   AppComponent,  
+   NewCmpComponent 
+]
+
+Import
+It is an array of modules required to be used in the application. It can also be used by the components in the Declaration array. 
+For example, right now in the @NgModule, we see the Browser Module imported. In case your application needs forms,
+you can include the module with the below code −
+
+import { FormsModule } from '@angular/forms';
+The import in the @NgModule will be like the following −
+
+imports: [ 
+   BrowserModule, 
+   FormsModule 
+]
+
+Providers
+This will include the services created.
+
+Bootstrap
+This includes the main app component for starting the execution.
+
+Data Binding =>
+we use double curly braces {{}} for data binding,this process is called interpolation
+
+Event Binding =>
+When a user interacts with an application in the form of a keyboard movement, a mouse click, or a mouse over, it generates an event. 
+These events need to be handled to perform some kind of action. This is where event binding comes into picture.
+
+Templates =>
+Angular 7 uses the <ng-template> as the tag instead of <template> which is used in Angular2.
+
+Directives =>
+Directives in Angular is a js class, which is declared as @directive. We have 3 directives in Angular. 
+The directives are listed below −
+Component Directives:
+These form the main class having details of how the component should be processed, instantiated and used at runtime.
+
+Structural Directives:
+A structure directive basically deals with manipulating the dom elements. 
+Structural directives have a * sign before the directive. For example, *ngIf and *ngFor.
+
+Attribute Directives:
+Attribute directives deal with changing the look and behavior of the dom element. 
+You can create your own directives as explained in the below section.
+
+Pipes => 
+Pipes were earlier called filters in Angular1 and called pipes from Angular2 onwards.
+The | character is used to transform data.
+Following is the syntax for the same −  {{ Welcome to Angular 7 | lowercase}}
+
+Here are some built-in pipes available with angular −
+Lowercasepipe
+Uppercasepipe
+Datepipe
+Currencypipe
+Jsonpipe
+Percentpipe
+Decimalpipe
+Slicepipe
+
+Routing =>
+Routing basically means navigating between pages.
+
+Services =>
+We might come across a situation where we need some code to be used everywhere on the page.
+
+Http Client =>
+HttpClient will help us fetch external data, post to it, etc. We need to import the http module to make use of the http service. 
+
+========================================Forms===========================================
+Template driven form => With a template driven form, most of the work is done in the template.
+Model driven form => With the model driven form, most of the work is done in the component class.
+========================================workflow========================================
+
+When we hit the url in the "http://localhost:4200/" browser, it first executes the index.html
+<html lang = "en">
+ 
+   <head> 
+      <meta charset = "utf-8"> 
+      <title>Angular7App</title> 
+      <base href = "/"> 
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1"> 
+      <link rel = "icon" type = "image/x-icon" href = "favicon.ico"> 
+   </head> 
+   <body> 
+      <app-root></app-root>
+   </body> 
+
+</html>
+root tag is created by angular by default,This tag has the reference in the main.ts file.
